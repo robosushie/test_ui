@@ -23,16 +23,17 @@ const RightSection = () => {
   return (
     <div className="rs_main_container">
       <div className="rs_scratchpad">
+        <div>Worksheet</div>
         <Editor
           value={codeValue}
           onValueChange={(code) => setCodeValue(code)}
           highlight={(code) => hightlightWithLineNumbers(code, languages.js)}
-          padding={10}
+          padding={16}
           textareaId="codeArea"
           className="editor"
           style={{
-            fontFamily: '"Fira code", "Fira Mono", monospace',
-            fontSize: 14,
+            // fontFamily: "monospace",
+            fontSize: 16,
             outline: 0,
             border: "none",
             width: "100%",
