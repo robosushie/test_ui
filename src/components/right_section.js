@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 
+import SQL_EditorNavBar from "./sql_editor_navbar";
+
 import Editor from "react-simple-code-editor";
 import { highlight, languages } from "prismjs/components/prism-core";
 import "prismjs/components/prism-clike";
@@ -20,10 +22,19 @@ const hightlightWithLineNumbers = (input, language) =>
 
 const RightSection = () => {
   const [codeValue, setCodeValue] = useState(code);
+
+  const handleRun = () => {
+    // Api call with the value stored in codeValue State
+    console.log("Run Button Clicked");
+    console.log("Sending Value to backend");
+    console.log(codeValue);
+    console.log("......");
+  };
+
   return (
     <div className="rs_main_container">
       <div className="rs_scratchpad">
-        <div>Worksheet</div>
+        <SQL_EditorNavBar onRun={handleRun} />
         <Editor
           value={codeValue}
           onValueChange={(code) => setCodeValue(code)}
