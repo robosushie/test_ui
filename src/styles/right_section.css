@@ -1,0 +1,13 @@
+.rs_main_container {
+  width: 75%;
+  height: 100%;
+  padding-left: 1rem;
+  padding-bottom: 0.8rem;
+  display: flex;
+}
+
+.rs_scratchpad {
+  flex-grow: 1;
+  border-radius: 0.2rem;
+  border: 0.5px solid #404040;
+}
